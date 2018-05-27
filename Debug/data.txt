@@ -8,3 +8,4 @@ VICTORY | HARD | name:     mateuz | time: 2.3 | tries:  1
 LOSS    | EASY | name:       mati | time: 11.0 | tries:  2 | correct positions: 1 | incorrect positions: 1
 VICTORY | HARD | name:          l | time:  1.4 | tries:  1 
 LOSS    | HARD | name: mateuszcis | time :  5.4 | tries :  2  | correct positions : 1 | incorrect positions : 0
+LOSS    | HARD | name:    mateusz | time:  4.7 | tries:  2  | correct positions: 0 | incorrect positions: 1

@@ -49,14 +49,14 @@ int enterProposition()
 	int wejscie;
 	unsigned int poprawnosc = 0;
 
-	printf("Podaj ciag: ");
+	printf("Type in your proposition: ");
 	scanf("%d", &wejscie);
 
 	while (poprawnosc == 0) //sprawdzenie poprawnosci propozycji gracza
 	{
 		if (wejscie > 100000 || wejscie <= 11110)
 		{
-			printf("Bledny ciag cyfr! Wpisz ponownie: ");
+			printf("Wrong input! Try again: ");
 			scanf("%d", &wejscie);
 			poprawnosc = 0; //blad
 		}
