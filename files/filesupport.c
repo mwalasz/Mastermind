@@ -12,8 +12,9 @@ void saveToFile(float time, const char* name, int lk_dw, int lk_dz, int lk_pr, u
 
 	if ((fp = fopen("data.txt", "a")) == NULL)
 	{
+		printf("\n\n");
 		perror("ERROR");
-		exit(1);
+		printf("\nResults could not be saved!");
 	}
 	else
 	{
@@ -29,7 +30,7 @@ void saveToFile(float time, const char* name, int lk_dw, int lk_dz, int lk_pr, u
 			if (choosedLevel == 0)
 				fprintf(fp, "LOSS    | EASY | name: %10s | time: %4.1f | tries: %2d | correct positions: %d | incorrect positions: %d\n", name, time, lk_pr, lk_dw, lk_dz);
 			else if (choosedLevel == 1)
-				fprintf(fp, "LOSS    | HARD | name: %10s | time: %4.1f | tries: %2d  | correct positions: %d | incorrect positions: %d\n", name, time, lk_pr, lk_dw, lk_dz);
+				fprintf(fp, "LOSS    | HARD | name: %10s | time: %4.1f | tries: %2d | correct positions: %d | incorrect positions: %d\n", name, time, lk_pr, lk_dw, lk_dz);
 		}
 	}
 }

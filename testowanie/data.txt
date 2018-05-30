@@ -1,3 +1,7 @@
 VICTORY | name: matiw2010 | time: 1.9 | tries: 1 | good positions: 5 | incorrect positions: 0
 VICTORY | HARD | name: RAF | time: 3.0 | tries: 2 
 VICTORY | HARD | name: RAF | time: 1.9 | tries: 1 
+VICTORY | HARD | name:    mateusz | time:  1.7 | tries:  1 
+LOSS    | HARD | name:    MATEUSZ | time: 13.1 | tries:  2 | correct positions: 1 | incorrect positions: 0
+LOSS    | HARD | name:    mateusz | time: 16.6 | tries:  2 | correct positions: 0 | incorrect positions: 0
+LOSS    | EASY | name:        mti | time: 16.0 | tries:  2 | correct positions: 1 | incorrect positions: 1

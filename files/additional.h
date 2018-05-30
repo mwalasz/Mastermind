@@ -5,4 +5,6 @@ int * convertNumberToArray(unsigned int number);
 
 void returnToMenu();
 
+void showMenu();
+
 #endif

@@ -1,6 +1,10 @@
 #include "../files/playerProposition.h"
 #include "../files/definitions.h"
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 void analysisOfPlayerProposition(int prop[], int los[], int lk_dw[], int lk_dz[], int indeksOK[])
 {////////////////////////////////////////////////////////////               /////
 	int losbis[LB_POZ];
@@ -46,21 +50,23 @@ void analysisOfPlayerProposition(int prop[], int los[], int lk_dw[], int lk_dz[]
 
 int enterProposition()
 {
-	int wejscie;
-	unsigned int poprawnosc = 0;
+	char stringArray[MAX_ARRAY_SIZE];
+	int output, length, i;
 
-	printf("Type in your proposition: ");
-	scanf("%d", &wejscie);
+	fgets(stringArray, sizeof(stringArray), stdin);
+	length = strlen(stringArray);
 
-	while (poprawnosc == 0) //sprawdzenie poprawnosci propozycji gracza
+	if (length == LB_POZ + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
 	{
-		if (wejscie > 100000 || wejscie <= 11110)
+		for (i = 0; i < length - 1; i++)
 		{
-			printf("Wrong input! Try again: ");
-			scanf("%d", &wejscie);
-			poprawnosc = 0; //blad
+			if (!isdigit(stringArray[i]) || stringArray[i] == '0')
+				return 0;
 		}
-		else poprawnosc = 1; //poprawne wejsci
+		output = atoi(stringArray);
 	}
-	return wejscie;
+	else return 0; //niepoprawna dlugosc
+
+	return output;
 }
+
