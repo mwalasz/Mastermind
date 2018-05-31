@@ -7,4 +7,6 @@ void returnToMenu();
 
 void showMenu();
 
+int countLinesInFile();
+
 #endif

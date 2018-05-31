@@ -5,4 +5,6 @@ void analysisOfPlayerProposition(int prop[], int los[], int lk_dw[], int lk_dz[]
 
 int enterProposition();
 
+int getProposition();
+
 #endif

@@ -37,3 +37,21 @@ void showMenu()
 	printf("|  | \\/ | |   | ___/   |  |__  | \\ | \\/ | | | \\| |__/ | \n");
 	printf("\\_____________________________________________________/ \n");
 }
+
+int countLinesInFile()
+{
+	FILE * results;
+	results = fopen("data.txt", "r");
+
+	/*zliczanie liczby linii w pliku */
+	//?
+	char c;
+	int lines = 0;
+	for (c = getc(results); c != EOF; c = getc(results))
+	{
+		if (c == '\n') // Increment count if this character is newline
+			lines++;
+	}
+
+	return lines;
+}

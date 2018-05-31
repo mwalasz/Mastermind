@@ -70,3 +70,21 @@ int enterProposition()
 	return output;
 }
 
+int getProposition()
+{
+	int output=1;
+	printf("Type in your proposition: ");
+	output = enterProposition();
+	
+	if (output == 0)
+	{
+		while (output == 0)
+		{
+			printf("Wrong input! Type in again: ");
+			output = enterProposition();
+		} 
+	}
+
+	return output;
+}
+
