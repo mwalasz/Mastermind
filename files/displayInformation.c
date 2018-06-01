@@ -4,14 +4,14 @@
 
 #include <Windows.h>
 
-void wyswietlanieWynikowKoncowych(int los[], int lk_dw, int lk_dz, int lk_pr, int propozycjaTabKopia[], float time)
+void displayFinalResults(int draw[], int goodPosition, int wrongPosition, int numberOfTries, int copyOfPropositionArray[], float time)
 {
 	system("cls");
-	if (lk_dw == LB_POZ)
+	if (goodPosition == NUMBER_OF_POSITIONS)
 	{
 		printf("Victory!\n You made it in ");
 		setColor(LIGHTGREEN);
-		printf("%d", lk_pr);
+		printf("%d", numberOfTries);
 		setColor(WHITE);
 		printf(" tries!\n\n");
 
@@ -23,42 +23,42 @@ void wyswietlanieWynikowKoncowych(int los[], int lk_dw, int lk_dz, int lk_pr, in
 		int i, j;
 		printf("Defeat!\n You have made ");
 		setColor(LIGHTRED);
-		printf("%d", MAX_PROB);
+		printf("%d", MAX_NUMBER_OF_TRIES);
 		setColor(WHITE);
 		printf(" unsucessful tries!\n\n");
 
 		printf("Correct positions:      ");
-		showGreen(lk_dw);
+		showGreen(goodPosition);
 
-		printf("\nIncorret positions:     ");
-		showRed(lk_dz);
+		printf("\nIncorrect positions:    ");
+		showRed(wrongPosition);
 
 		printf("\nNot-matched digits:     ");
-		showRed((LB_POZ - lk_dz - lk_dw));
+		showRed((NUMBER_OF_POSITIONS - wrongPosition - goodPosition));
 		printf("\n\n");
 
 		printf("Time spend:              ");
 		printf("%.1f seconds\n\n", time);
 
 		printf("Right combination:      ");
-		for (i = 0; i < LB_POZ; i++)
+		for (i = 0; i < NUMBER_OF_POSITIONS; i++)
 		{
-			showGreen(los[i]);
+			showGreen(draw[i]);
 		}
 
 		printf("\nYour proposition:       ");
-		for (j = 0; j < LB_POZ; j++)
+		for (j = 0; j < NUMBER_OF_POSITIONS; j++)
 		{
 			printf("|");
-			if (los[j] == propozycjaTabKopia[j])
+			if (draw[j] == copyOfPropositionArray[j])
 			{
 				setColor(LIGHTGREEN);
-				printf(" %d ", propozycjaTabKopia[j]); // wypelnianie tablicy losowymi cyframi od 0 do MAKSIMUM
+				printf(" %d ", copyOfPropositionArray[j]); // wypelnianie tablicy losowymi cyframi od 0 do MAKSIMUM
 			}
 			else
 			{
 				setColor(LIGHTRED);
-				printf(" %d ", propozycjaTabKopia[j]); // wypelnianie tablicy losowymi cyframi od 0 do MAKSIMUM
+				printf(" %d ", copyOfPropositionArray[j]); // wypelnianie tablicy losowymi cyframi od 0 do MAKSIMUM
 			}
 			setColor(WHITE);
 			printf("|");
@@ -68,28 +68,29 @@ void wyswietlanieWynikowKoncowych(int los[], int lk_dw, int lk_dz, int lk_pr, in
 
 }
 
-void wyswietlanieWynikowRundy(int lk_dw, int lk_dz, int propozycjaTabKopia[], int indeksOK[])
+void displayResultsOfRound(int goodPosition, int wrongPosition, int copyOfPropositionArray[], int correctIndex[])
 {
+	int p;
 	system("cls");
 	printf("Your proposition:         ");
 
-	for (int p = 0; p < LB_POZ; p++)
+	for (p = 0; p < NUMBER_OF_POSITIONS; p++)
 	{
-		if (indeksOK[p] == 1)
+		if (correctIndex[p] == 1)
 		{
-			showGreen(propozycjaTabKopia[p]);
+			showGreen(copyOfPropositionArray[p]);
 		}
 		else
 		{
-			printf("| %d |", propozycjaTabKopia[p]);
+			printf("| %d |", copyOfPropositionArray[p]);
 		}
 	}
 
 	printf("\nCorrect place:            ");
-	showGreen(lk_dw);
+	showGreen(goodPosition);
 
 	printf("\nIncorrect place:          ");
-	showRed(lk_dz);
+	showRed(wrongPosition);
 
 	printf("\n\n");
 }
@@ -125,4 +126,17 @@ void chooseDificulty()
 
 	setColor(WHITE);
 	printf("\nYour choose: ");
+}
+
+void displayWarning(int numberOfTries)
+{
+	if (numberOfTries == MAX_NUMBER_OF_TRIES - 1)
+		printf("It is your last chance, try harder!\n\n");
+}
+
+void displayTableHeader()
+{
+	printf("|=======|======|==================|============|===========|======================|========================|\n");
+	printf("| RESULT|  LVL |       NAME       |    TIME    |   TRIES   |        CORRECT       |        INCORRECT       |\n");
+	printf("|=======|======|==================|============|===========|======================|========================|\n");
 }

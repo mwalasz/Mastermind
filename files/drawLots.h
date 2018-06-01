@@ -1,10 +1,10 @@
 #ifndef DRAWLOTS_H
 #define DRAWLOTS_H
 
-void randomizeNumber(int los[], unsigned int przelacznik);
+void randomizeNumber(int draw[], unsigned int switchOfFunction);
 
-void randomRepeatable(int los[]);
+void randomRepeatable(int draw[]);
 
-void randomNonRepeatable(int los[]);
+void randomNonRepeatable(int draw[]);
 
 #endif

@@ -22,3 +22,11 @@ LOSS    | EASY | name:       test | time:  2.2 | tries:  2 | correct positions: 
 LOSS    | HARD | name:          m | time:  2.1 | tries:  2 | correct positions: 0 | incorrect positions: 3
 LOSS    | HARD | name:      test3 | time:  4.1 | tries:  2 | correct positions: 0 | incorrect positions: 4
 VICTORY | EASY | name:      test3 | time:  7.1 | tries:  2
+LOSS    | HARD | name:    mateusz | time:  8.1 | tries:  2 | correct positions: 2 | incorrect positions: 3 |
+LOSS    | EASY | name:    MATEUSZ | time: 21.1 | tries:  4 | correct positions: 3 | incorrect positions: 2 |
+LOSS    | EASY | name:    MATEUSZ | time: 22.6 | tries:  4 | correct positions: 2 | incorrect positions: 2 |
+LOSS    | HARD | name:    mateusz | time:  7.3 | tries:  2 | correct positions: 1 | incorrect positions: 2 |
+LOSS    | HARD | name:        mat | time: 19.3 | tries:  3 | correct positions: 3 | incorrect positions: 1 |
+LOSS    | HARD | name:        mat | time: 11.9 | tries:  3 | correct positions: 3 | incorrect positions: 0 |
+VICTORY | EASY | name:         12 | time: 15.1 | tries:  3 |
+VICTORY | HARD | name:        mat | time: 11.1 | tries:  3 |

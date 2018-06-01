@@ -3,55 +3,53 @@
 
 #include <stdio.h>
 
-void randomizeNumber(int los[], unsigned int przelacznik) //randomizeNumber kombinacji
+void randomizeNumber(int draw[], unsigned int switchOfFunction) //randomizeNumber kombinacji
 {
 	srand(time(NULL));
 
-	if (przelacznik == 1) //tryb trudny - liczby sie powtarzaja
+	if (switchOfFunction == 1) //tryb trudny - liczby sie powtarzaja
 	{
-		randomRepeatable(los);
+		randomRepeatable(draw);
 	}
-	else if (przelacznik == 0) //tryb prosty - liczby sie nie powtarzaja
+	else if (switchOfFunction == 0) //tryb prosty - liczby sie nie powtarzaja
 	{
-		randomNonRepeatable(los);
+		randomNonRepeatable(draw);
 	}
 }
 
-void randomRepeatable(int los[])
+void randomRepeatable(int draw[])
 {
 	int i;
-	for (i = 0; i < LB_POZ; i++)
+	for (i = 0; i < NUMBER_OF_POSITIONS; i++)
 	{
-		los[i] = 1 + rand() % 9; // wypelnianie tablicy losowymi cyframi od 1 do 9
-		printf("%d ", los[i]); //WYPISYWANIE DO USUNIECIA!!!!!
+		draw[i] = 1 + rand() % 9; // wypelnianie tablicy losowymi cyframi od 1 do 9
+		printf("%d ", draw[i]); //WYPISYWANIE DO USUNIECIA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 }
 
-void randomNonRepeatable(int los[])
+void randomNonRepeatable(int draw[])
 {
-	int chk, get, i, c;
+	int temp, get, i, c;
 	c = i = 0;
 
-	while (c < LB_POZ)
+	while (c < NUMBER_OF_POSITIONS)
 	{
 		get = 1 + rand() % 9;
 
 		for (i = 0; i <= c; i++)
 		{
-			if (los[i] == get)
+			if (draw[i] == get)
 			{
-				chk = 0;
+				temp = 0;
 				break;
 			}
-			else if (los[i] != get)
-			{
-				chk = 1;
-			}
+			else if (draw[i] != get)
+				temp = 1;
 		}
-		if (chk == 1)
+		if (temp == 1)
 		{
-			los[c] = get;
-			printf("%d ", los[c]); //WYPISYWANIE DO USUNIECIA!!!!!
+			draw[c] = get;
+			printf("%d ", draw[c]); //WYPISYWANIE DO USUNIECIA!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			c++;
 		}
 	}

@@ -5,44 +5,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void analysisOfPlayerProposition(int prop[], int los[], int lk_dw[], int lk_dz[], int indeksOK[])
-{////////////////////////////////////////////////////////////               /////
-	int losbis[LB_POZ];
+void analysisOfPlayerProposition(int proposition[], int draw[], int goodPosition[], int wrongPosition[], int correctIndex[])
+{
+	int copyOfDraw[NUMBER_OF_POSITIONS];
+	int i, j, k, l, buffer;
 
 	//kopiowanie wylosowanej sekwencji przez komputer
-	int i;
-	for (i = 0; i < LB_POZ; i++)
-		losbis[i] = los[i];
+	for (i = 0; i < NUMBER_OF_POSITIONS; i++)
+		copyOfDraw[i] = draw[i];
 
 	//zliczanie dobrych cyfr na dobrych miejscach
-	*lk_dw = 0;
+	*goodPosition = 0;
 
-	int j;
-	for (j = 0; j < LB_POZ; j++)
+	for (j = 0; j < NUMBER_OF_POSITIONS; j++)
 	{
-		if (prop[j] == losbis[j])
+		if (proposition[j] == copyOfDraw[j])
 		{
-			(*lk_dw)++;
-			losbis[j] = prop[j] = 0;
-			indeksOK[j] = 1; //dodane przeze mnie do dzialajacej!!!!!!!!!!!!!!
+			(*goodPosition)++;
+			copyOfDraw[j] = proposition[j] = 0;
+			correctIndex[j] = 1;
 		}
 	}
 
 	//zliczanie dobrych cyfr na zlych miejscach
-	int k, l;
-	*lk_dz = 0;
+	*wrongPosition = 0;
 
-	for (k = 0; k < LB_POZ; k++)
+	for (k = 0; k < NUMBER_OF_POSITIONS; k++)
 	{
-		int bufor;
-		bufor = losbis[k];
+		buffer = copyOfDraw[k];
 
-		for (l = 0; l < LB_POZ; l++)
+		for (l = 0; l < NUMBER_OF_POSITIONS; l++)
 		{
-			if (prop[l] != 0 && prop[l] == bufor)
+			if (proposition[l] != 0 && proposition[l] == buffer)
 			{
-				(*lk_dz)++;
-				prop[l] = losbis[k] = 0;
+				(*wrongPosition)++;
+				proposition[l] = copyOfDraw[k] = 0;
 			}
 		}
 	}
@@ -56,7 +53,7 @@ int enterProposition()
 	fgets(stringArray, sizeof(stringArray), stdin);
 	length = strlen(stringArray);
 
-	if (length == LB_POZ + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
+	if (length == NUMBER_OF_POSITIONS + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
 	{
 		for (i = 0; i < length - 1; i++)
 		{
@@ -72,7 +69,7 @@ int enterProposition()
 
 int getProposition()
 {
-	int output=1;
+	int output = 1;
 	printf("Type in your proposition: ");
 	output = enterProposition();
 	

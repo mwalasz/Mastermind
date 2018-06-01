@@ -7,7 +7,7 @@ int * convertNumberToArray(unsigned int number)
 {
 	unsigned int length = (int)(log10((float)number)) + 1;
 
-	int * arr = (int *)malloc(length * sizeof(int)), *curr = arr;
+	int * array = (int *)malloc(length * sizeof(int)), *curr = array;
 	do
 	{
 		*curr++ = number % 10;
@@ -16,11 +16,11 @@ int * convertNumberToArray(unsigned int number)
 
 	for (int i = 0; i < 3; i++)
 	{
-		int * pom = arr[i];
-		arr[i] = arr[5 - i - 1];
-		arr[5 - i - 1] = pom;
+		int * temp = array[i];
+		array[i] = array[5 - i - 1];
+		array[5 - i - 1] = temp;
 	}
-	return arr;
+	return array;
 }
 
 void returnToMenu()
@@ -43,15 +43,15 @@ int countLinesInFile()
 	FILE * results;
 	results = fopen("data.txt", "r");
 
-	/*zliczanie liczby linii w pliku */
-	//?
 	char c;
-	int lines = 0;
+	int numberOfLines = 0;
 	for (c = getc(results); c != EOF; c = getc(results))
 	{
-		if (c == '\n') // Increment count if this character is newline
-			lines++;
+		if (c == '\n')
+			numberOfLines++;
 	}
 
-	return lines;
+	fclose(results);
+
+	return numberOfLines;
 }
