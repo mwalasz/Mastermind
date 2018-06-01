@@ -7,6 +7,8 @@ void returnToMenu();
 
 void showMenu();
 
+void endOfProgram(const char* name);
+
 int countLinesInFile();
 
 #endif

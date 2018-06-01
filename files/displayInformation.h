@@ -9,7 +9,7 @@ void showRed(int show);
 
 void showGreen(int show);
 
-void chooseDificulty();
+void chooseDifficulty();
 
 void displayWarning(int numberOfTries);
 

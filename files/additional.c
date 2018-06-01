@@ -55,3 +55,9 @@ int countLinesInFile()
 
 	return numberOfLines;
 }
+
+void endOfProgram(const char* name)
+{
+	system("cls");
+	printf("Thanks for the game! Goodbye %s!", name);
+}

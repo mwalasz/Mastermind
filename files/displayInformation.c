@@ -113,7 +113,7 @@ void showGreen(int show)
 	printf("|");
 }
 
-void chooseDificulty()
+void chooseDifficulty()
 {
 	system("cls");
 
