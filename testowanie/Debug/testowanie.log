@@ -1,6 +1,2 @@
-﻿  filesupport.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(10): warning C4101: "levelInfo": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(9): warning C4101: "i": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(48): warning C4013: niezdefiniowany "countLinesInFile"; przy założeniu, że extern zwraca int
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(52): warning C4013: niezdefiniowany "displayTableHeader"; przy założeniu, że extern zwraca int
+﻿  displayInformation.c
   testowanie.vcxproj -> D:\Studia\przedmioty\semestr 2\PK\git\Mastermind\Debug\testowanie.exe

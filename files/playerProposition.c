@@ -45,7 +45,7 @@ void analysisOfPlayerProposition(int proposition[], int draw[], int goodPosition
 	}
 }
 
-int enterProposition()
+int getAndCheckIfCorrect()
 {
 	char stringArray[MAX_ARRAY_SIZE];
 	int output = 0;
@@ -75,12 +75,12 @@ int getProposition()
 	int output = 0;
 
 	printf("Type in your proposition: ");
-	output = enterProposition();
+	output = getAndCheckIfCorrect();
 
 	while (output == 0)
 	{
 		printf("Wrong input! Type in again: ");
-		output = enterProposition();
+		output = getAndCheckIfCorrect();
 	}
 
 	return output;

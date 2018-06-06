@@ -29,7 +29,7 @@ void returnToMenu()
 	_getch();
 }
 
-void showMenu()
+void showGreeting()
 {
 	printf(" _____________________________________________________\n");
 	printf("/           _    ___  ___  __  __         .      ___  \\ \n");
@@ -38,23 +38,6 @@ void showMenu()
 	printf("\\_____________________________________________________/ \n");
 }
 
-int countLinesInFile()
-{
-	FILE * results;
-	results = fopen("data.txt", "r");
-
-	char c;
-	int numberOfLines = 0;
-	for (c = getc(results); c != EOF; c = getc(results))
-	{
-		if (c == '\n')
-			numberOfLines++;
-	}
-
-	fclose(results);
-
-	return numberOfLines;
-}
 
 void endOfProgram(const char* name)
 {
