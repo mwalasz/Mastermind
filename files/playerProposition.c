@@ -48,7 +48,10 @@ void analysisOfPlayerProposition(int proposition[], int draw[], int goodPosition
 int enterProposition()
 {
 	char stringArray[MAX_ARRAY_SIZE];
-	int output, length, i;
+	int output = 0;
+	int length, i;
+
+	fseek(stdin, 0, SEEK_END); //czyszczenie bufora
 
 	fgets(stringArray, sizeof(stringArray), stdin);
 	length = strlen(stringArray);
@@ -68,18 +71,16 @@ int enterProposition()
 }
 
 int getProposition()
-{
-	int output = 1;
+{	
+	int output = 0;
+
 	printf("Type in your proposition: ");
 	output = enterProposition();
-	
-	if (output == 0)
+
+	while (output == 0)
 	{
-		while (output == 0)
-		{
-			printf("Wrong input! Type in again: ");
-			output = enterProposition();
-		} 
+		printf("Wrong input! Type in again: ");
+		output = enterProposition();
 	}
 
 	return output;

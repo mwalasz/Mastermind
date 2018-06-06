@@ -9,11 +9,11 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 	int i;
 	char levelInfo;
 
-	if ((results = fopen("data.txt", "a")) == NULL)
+	if ((results = fopen("../data/results.txt", "a")) == NULL)
 	{
 		printf("\n\n");
-		perror("ERROR");
-		printf("\nResults could not be saved!");
+		perror("Error");
+		printf("Results could not be saved!");
 	}
 	else
 	{
@@ -31,8 +31,8 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 			else if (choosedLevel == 1)
 				fprintf(results, "LOSS    | HARD | name: %10s | time: %4.1f | tries: %2d | correct positions: %d | incorrect positions: %d |\n", name, time, numberOfTries, goodPosition, wrongPosition);
 		}     
+		fclose(results);
 	}
-	fclose(results);
 }
 
 void showResultsFromFile(int switchOfType)
@@ -42,7 +42,7 @@ void showResultsFromFile(int switchOfType)
 	char text[150], *result;
 
 	FILE * results;
-	results = fopen("data.txt", "r");
+	results = fopen("../data/results.txt", "r");
 
 	/*zliczanie liczby linii w pliku */
 	int lines = countLinesInFile();
@@ -74,8 +74,7 @@ void showResultsFromFile(int switchOfType)
 			}
 			else break;
 		}
+		fclose(results);
 	}
-	else printf("Error: cannot open the file!");
-
-	fclose(results);
+	else perror("\nError");
 }

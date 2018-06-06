@@ -152,7 +152,7 @@
     <ClCompile Include="..\files\drawLots.c" />
     <ClCompile Include="..\files\filesupport.c" />
     <ClCompile Include="..\files\playerProposition.c" />
-    <ClCompile Include="testowanie.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\files\additional.h" />

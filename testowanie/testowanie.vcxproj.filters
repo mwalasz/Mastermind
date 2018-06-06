@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testowanie.c">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="..\files\filesupport.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
@@ -31,6 +28,9 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="..\files\additional.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
