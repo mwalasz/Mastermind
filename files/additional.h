@@ -9,4 +9,7 @@ int * convertNumberToArray(unsigned int number);
 /* funkcja umozliwiajaca powrot do menu z jakiegos punktu programu */
 void returnToMenu();
 
+/* funkcja wyswietlajaca pomoc */
+void showHelp();
+
 #endif

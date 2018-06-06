@@ -57,9 +57,7 @@ void showResultsFromFile(int switchOfType)
 
 			if (result != NULL)
 			{
-				if (switchOfType == 0)
-					printf("%s", text);
-				else if (switchOfType == 1)/* wyswietlanie porazek */
+				if (switchOfType == 1)/* wyswietlanie porazek */
 				{
 					if (text[0] == 'L')
 						printf("%s", text);
@@ -71,6 +69,8 @@ void showResultsFromFile(int switchOfType)
 						printf("%s", text);
 					else continue;
 				}
+				else if (switchOfType == 3) //wyswietlanie wszystkiego
+					printf("%s", text);
 			}
 			else break;
 		}

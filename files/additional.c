@@ -28,3 +28,9 @@ void returnToMenu()
 	printf("\n\nPress any to return to menu.");
 	_getch();
 }
+
+void showHelp()
+{
+	system("cls");
+	printf("Help\n\n\nHere will appear some tips.");
+}

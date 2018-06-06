@@ -118,11 +118,13 @@ void chooseDifficulty()
 	system("cls");
 
 	printf("Choose dificulty:\n\n");
+
+	printf("0 : Back to main menu\n");
 	setColor(LIGHTGREEN);
-	printf("0 : Easy (numbers cannot repeat)\n");
+	printf("1 : Easy (numbers cannot repeat)\n");
 
 	setColor(LIGHTRED);
-	printf("1 : Hard (numbers may repeat)\n");
+	printf("2 : Hard (numbers may repeat)\n");
 
 	setColor(WHITE);
 	printf("\nYour choose: ");
