@@ -140,3 +140,19 @@ void displayTableHeader()
 	printf("  RESULT|  LVL |       NAME       |    TIME    |   TRIES   |        CORRECT       |        INCORRECT       \n");
 	printf("========|======|==================|============|===========|======================|========================\n");
 }
+
+void showGreeting()
+{
+	printf(" _____________________________________________________\n");
+	printf("/           _    ___  ___  __  __         .      ___  \\ \n");
+	printf("|  |\\  /|  /_\\  /___   |  |__  |_\\ |\\  /| | |\\ | |  \\ | \n");
+	printf("|  | \\/ | |   | ___/   |  |__  | \\ | \\/ | | | \\| |__/ | \n");
+	printf("\\_____________________________________________________/ \n");
+}
+
+
+void endOfProgram(const char* name)
+{
+	system("cls");
+	printf("Thanks for the game! Goodbye %s!", name);
+}

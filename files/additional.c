@@ -28,19 +28,3 @@ void returnToMenu()
 	printf("\n\nPress any to return to menu.");
 	_getch();
 }
-
-void showGreeting()
-{
-	printf(" _____________________________________________________\n");
-	printf("/           _    ___  ___  __  __         .      ___  \\ \n");
-	printf("|  |\\  /|  /_\\  /___   |  |__  |_\\ |\\  /| | |\\ | |  \\ | \n");
-	printf("|  | \\/ | |   | ___/   |  |__  | \\ | \\/ | | | \\| |__/ | \n");
-	printf("\\_____________________________________________________/ \n");
-}
-
-
-void endOfProgram(const char* name)
-{
-	system("cls");
-	printf("Thanks for the game! Goodbye %s!", name);
-}

@@ -27,4 +27,10 @@ void displayWarning(int numberOfTries);
 /* funkcja wyswietlajaca naglowek tabeli wynikow */
 void displayTableHeader();
 
+/* funkcja wyswietlajaca logo po uruchomieniu programu */
+void showGreeting();
+
+/* funkcja wyswietlajaca pozegnanie po zakonczeniu programu */
+void endOfProgram(const char* name);
+
 #endif
