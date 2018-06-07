@@ -12,4 +12,6 @@ void returnToMenu();
 /* funkcja wyswietlajaca pomoc */
 void showHelp();
 
+void takeParameter(int argc, char* argv[]);
+
 #endif

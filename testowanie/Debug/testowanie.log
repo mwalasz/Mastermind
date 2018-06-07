@@ -1,15 +1,7 @@
-﻿  main.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\testowanie\main.c(22): warning C4101: "playerProposition": lokalna zmienna, do której nie istnieje odwołanie
-  playerProposition.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\playerproposition.c(64): warning C4013: niezdefiniowany "isdigit"; przy założeniu, że extern zwraca int
-  filesupport.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(10): warning C4101: "levelInfo": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(9): warning C4101: "i": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(54): warning C4013: niezdefiniowany "displayTableHeader"; przy założeniu, że extern zwraca int
-  drawLots.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\drawlots.c(8): warning C4013: niezdefiniowany "srand"; przy założeniu, że extern zwraca int
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\drawlots.c(8): warning C4013: niezdefiniowany "time"; przy założeniu, że extern zwraca int
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\drawlots.c(25): warning C4013: niezdefiniowany "rand"; przy założeniu, że extern zwraca int
-  displayInformation.c
-  Generowanie kodu...
+﻿  additional.c
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\additional.c(8): warning C4013: niezdefiniowany "log10"; przy założeniu, że extern zwraca int
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\additional.c(21): warning C4047: "=": "int" różni się w poziomach operatorów pośrednich od "int *"
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\additional.c(19): warning C4047: "inicjowanie": "int *" różni się w poziomach operatorów pośrednich od "int"
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\additional.c(29): warning C4013: niezdefiniowany "_getch"; przy założeniu, że extern zwraca int
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\additional.c(42): warning C4013: niezdefiniowany "strcmp"; przy założeniu, że extern zwraca int
   testowanie.vcxproj -> D:\Studia\przedmioty\semestr 2\PK\git\Mastermind\Debug\testowanie.exe

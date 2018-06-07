@@ -25,7 +25,7 @@ int * convertNumberToArray(unsigned int number)
 
 void returnToMenu()
 {
-	printf("\n\nPress any to return to menu.");
+	printf("\n\nPress any key.");
 	_getch();
 }
 
@@ -33,4 +33,22 @@ void showHelp()
 {
 	system("cls");
 	printf("Help\n\n\nHere will appear some tips.");
+}
+
+void takeParameter(int argc, char* argv[])
+{
+	if (argc == 2)
+	{
+		if (!strcmp(argv[1],"-h")) //wywolanie pomocy
+		{
+			showHelp();
+			returnToMenu();
+		}
+		else
+		{
+			system("cls");
+			printf("Incorrect parameters.\nTo launch game normally, press any key.");
+			_getch();
+		}
+	}
 }
