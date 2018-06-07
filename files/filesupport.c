@@ -45,54 +45,64 @@ void showResultsFromFile(int switchOfType)
 	results = fopen("../data/results.txt", "r");
 
 	/*zliczanie liczby linii w pliku */
+
 	int lines = countLinesInFile();
-
-	if (results)
+	if (lines != 0)
 	{
-		displayTableHeader();
-
-		for (i = 0; i < lines; i++)
+		if (results)
 		{
-			result = fgets(text, max_n, results);   // czytamy ze standardowego wejœcia
+			displayTableHeader();
 
-			if (result != NULL)
+			for (i = 0; i < lines; i++)
 			{
-				if (switchOfType == 1)/* wyswietlanie porazek */
+				result = fgets(text, max_n, results);   // czytamy ze standardowego wejœcia
+
+				if (result != NULL)
 				{
-					if (text[0] == 'L')
+					if (switchOfType == 3) //wyswietlanie wszystkiego
 						printf("%s", text);
-					else continue;
+					else if (switchOfType == 1)/* wyswietlanie porazek */
+					{
+						if (text[0] == 'L')
+							printf("%s", text);
+						else continue;
+					}
+					else if (switchOfType == 2)/* wyswietlanie zwyciestw */
+					{
+						if (text[0] == 'V')
+							printf("%s", text);
+						else continue;
+					}
 				}
-				else if (switchOfType == 2)/* wyswietlanie zwyciestw */
-				{
-					if (text[0] == 'V')
-						printf("%s", text);
-					else continue;
-				}
-				else if (switchOfType == 3) //wyswietlanie wszystkiego
-					printf("%s", text);
+				else break;
 			}
-			else break;
+
+			fclose(results);
 		}
-		fclose(results);
+		else perror("\nError");
 	}
-	else perror("\nError");
+	else printf("\nError: cannot open the file!");
 }
 
 int countLinesInFile()
 {
 	FILE * results;
-	results = fopen("data.txt", "r");
-
 	char c;
 	int numberOfLines = 0;
-	for (c = getc(results); c != EOF; c = getc(results))
+
+	results = fopen("../data/results.txt", "r");
+
+	if (results == NULL)
+		return 0;
+	else
 	{
-		if (c == '\n')
-			numberOfLines++;
+		for (c = getc(results); c != EOF; c = getc(results))
+		{
+			if (c == '\n')
+				numberOfLines++;
+		}
+
+		fclose(results);
 	}
-
-	fclose(results);
-
 	return numberOfLines;
 }

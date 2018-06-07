@@ -45,7 +45,7 @@ void analysisOfPlayerProposition(int proposition[], int draw[], int goodPosition
 	}
 }
 
-int getAndCheckIfCorrect()
+int getAndCheckIfCorrect(int lengthToCheck)
 {
 	char stringArray[MAX_ARRAY_SIZE];
 	int output = 0;
@@ -56,12 +56,14 @@ int getAndCheckIfCorrect()
 	fgets(stringArray, sizeof(stringArray), stdin);
 	length = strlen(stringArray);
 
-	if (length == NUMBER_OF_POSITIONS + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
+
+	if (length == lengthToCheck + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
 	{
 		for (i = 0; i < length - 1; i++)
 		{
 			if (!isdigit(stringArray[i]) || stringArray[i] == '0')
-				return 0;
+					return 0;
+		
 		}
 		output = atoi(stringArray);
 	}
@@ -75,12 +77,12 @@ int getProposition()
 	int output = 0;
 
 	printf("Type in your proposition: ");
-	output = getAndCheckIfCorrect();
+	output = getAndCheckIfCorrect(NUMBER_OF_POSITIONS);
 
 	while (output == 0)
 	{
 		printf("Wrong input! Type in again: ");
-		output = getAndCheckIfCorrect();
+		output = getAndCheckIfCorrect(NUMBER_OF_POSITIONS);
 	}
 
 	return output;
