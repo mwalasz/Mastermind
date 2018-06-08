@@ -1,4 +1,5 @@
 #include "../files/additional.h"
+#include "../files/definitions.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,4 +52,15 @@ void takeParameter(int argc, char* argv[])
 			_getch();
 		}
 	}
+}
+
+char * enterName()
+{
+	system("cls");
+	char * playerName = malloc(NAME_LENGTH * sizeof(char));
+
+	printf("Enter your name: ");
+	scanf("%s", playerName);
+
+	return playerName;
 }

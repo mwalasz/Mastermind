@@ -44,7 +44,7 @@ void showResultsFromFile(int switchOfType)
 	FILE * results;
 	results = fopen("../data/results.txt", "r");
 
-	/*zliczanie liczby linii w pliku */
+	/* zliczanie liczby linii w pliku */
 
 	int lines = countLinesInFile();
 	if (lines != 0)

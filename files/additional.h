@@ -12,6 +12,10 @@ void returnToMenu();
 /* funkcja wyswietlajaca pomoc */
 void showHelp();
 
+/* funkcja pobierajaca parrametr w trakcie uruchamiania programu */
 void takeParameter(int argc, char* argv[]);
+
+/* funkcja pobierajaca imie gracza i alokujaca ja dynamicznie*/
+char * enterName();
 
 #endif
