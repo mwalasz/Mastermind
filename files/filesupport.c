@@ -1,4 +1,5 @@
-#include "fileSupport.h"
+#include "../files/filesupport.h"
+#include "../files/displayInformation.h"
 
 #include <stdio.h>
 #include <string.h>

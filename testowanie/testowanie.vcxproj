@@ -159,7 +159,6 @@
     <ClInclude Include="..\files\displayInformation.h" />
     <ClInclude Include="..\files\drawLots.h" />
     <ClInclude Include="..\files\filesupport.h" />
-    <ClInclude Include="..\files\game.h" />
     <ClInclude Include="..\files\playerProposition.h" />
     <ClInclude Include="..\files\rlutil.h" />
   </ItemGroup>

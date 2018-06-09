@@ -41,4 +41,10 @@ void showMainMenuText();
 /* funkcja wyswietlajaca komunikat o wyborze akcji w program po zakonczeniu gry */
 void showMenuAfterGameText();
 
+/* funkcja wyswietlajaca komunikat o nowej grze */
+void newGameComunicate();
+
+/* funkcja wyswietlajaca pomoc */
+void showHelp();
+
 #endif

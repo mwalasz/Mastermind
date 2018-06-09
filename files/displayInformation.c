@@ -1,4 +1,4 @@
-#include "displayInformation.h"
+#include "../files/displayInformation.h"
 #include "../files/rlutil.h"
 #include "../files/definitions.h"
 
@@ -178,4 +178,35 @@ void showMenuAfterGameText()
 {
 	Sleep(1500);
 	printf("\n\n1 : Play again\n2 : Back to menu\n3 : Exit the game\n\nYour choose: ");
+}
+
+void newGameComunicate()
+{
+	system("cls");
+	printf("New game!");
+	Sleep(1000);
+	system("cls");
+}
+
+void showHelp()
+{
+	system("cls");
+	printf("HELP");
+	printf("\n\nWhen you run program with '-h' flag, you will first see help and then program will start normally.\n");
+	printf("When you run program with '-a' flag, you will first see author of the program and then program will start normally.\n");
+	printf("\nIn main menu you can perform 4 actions: play a game, display all-time results, show help or turn off the program.\n");
+	printf("\nGAME - click '1'\n");
+	printf("You have 2 possible options: easy level (digits cannot repeat) or hard level (digits can repeat).\n");
+	printf("To choose EASY level - press '1' and ENTER.\n");
+	printf("To choose HARD level - press '2' and ENTER.\n");
+	printf("\nSTATISTICS - click '2'\n");
+	printf("You have 3 possible options: show only losses, show only victories or show everything.\n");
+	printf("To choose DEFEATS level - press '1' and ENTER.\n");
+	printf("To choose VICTORIES level - press '2' and ENTER.\n");
+	printf("To choose EVERYTHING level - press '3' and ENTER.\n");
+	printf("\nHELP - click '3'\n");
+	printf("On the screen will appear comunicate, how to use program.\n");
+	printf("\nQUIT - click '4'\n");
+	printf("The program will shut down.");
+	printf("\n\nIn every possible menu, always the last option is return to main menu.");
 }

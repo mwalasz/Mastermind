@@ -1,9 +1,12 @@
 #include "../files/additional.h"
 #include "../files/definitions.h"
+#include "../files/playerProposition.h"
 
+#include <conio.h>
 #include <Windows.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int * convertNumberToArray(unsigned int number)
 {
@@ -29,28 +32,6 @@ void returnToMenu()
 {
 	printf("\n\nPress any key.");
 	_getch();
-}
-
-void showHelp()
-{
-	system("cls");
-	printf("HELP");
-	printf("\n\nWhen you run program with '-h' flag, you will first see help and then program will start normally.\n");
-	printf("\nIn main menu you can perform 4 actions: play a game, display all-time results, show help or turn off the program.\n");
-	printf("\nGAME - click '1'\n");
-	printf("You have 2 possible options: easy level (digits cannot repeat) or hard level (digits can repeat).\n");
-	printf("To choose EASY level - press '1' and ENTER.\n");
-	printf("To choose HARD level - press '2' and ENTER.\n");
-	printf("\nSTATISTICS - click '2'\n");
-	printf("You have 3 possible options: show only losses, show only victories or show everything.\n");
-	printf("To choose DEFEATS level - press '1' and ENTER.\n");
-	printf("To choose VICTORIES level - press '2' and ENTER.\n");
-	printf("To choose EVERYTHING level - press '3' and ENTER.\n");
-	printf("\nHELP - click '3'\n");
-	printf("On the screen will appear comunicate, how to use program.\n");
-	printf("\nQUIT - click '4'\n");
-	printf("The program will shut down.");
-	printf("\n\nIn every possible menu, always the last option is return to main menu.");
 }
 
 void takeParameter(int argc, char* argv[])
@@ -87,7 +68,7 @@ char * enterName()
 	return playerName;
 }
 
-int returnCheckedCorrectSwitchVariable(int variableToCheck)
+unsigned int returnCheckedCorrectSwitchVariable(unsigned int variableToCheck)
 {
 	variableToCheck = getAndCheckIfCorrect(1);
 	while (variableToCheck == 0)
@@ -97,12 +78,4 @@ int returnCheckedCorrectSwitchVariable(int variableToCheck)
 	}
 
 	return variableToCheck;
-}
-
-void newGameComunicate()
-{
-	system("cls");
-	printf("New game!");
-	Sleep(1000);
-	system("cls");
 }

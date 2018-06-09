@@ -1,7 +1,9 @@
-#include "drawLots.h"
+#include "../files/drawLots.h"
 #include "../files/definitions.h"
 
+#include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void randomizeNumber(int draw[], unsigned int switchOfFunction) //randomizeNumber kombinacji
 {
@@ -23,7 +25,7 @@ void randomRepeatable(int draw[])
 	for (i = 0; i < NUMBER_OF_POSITIONS; i++)
 	{
 		draw[i] = 1 + rand() % 9; // wypelnianie tablicy losowymi cyframi od 1 do 9
-		printf("%d ", draw[i]); //WYPISYWANIE DO USUNIECIA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// printf("%d ", draw[i]); mozliwosc wyswietlania wygenerowanej kombinacji w celu sprawdzenia poprawnosci dzialania programu
 	}
 }
 
@@ -49,8 +51,8 @@ void randomNonRepeatable(int draw[])
 		if (temp == 1)
 		{
 			draw[c] = get;
-			printf("%d ", draw[c]); //WYPISYWANIE DO USUNIECIA!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			c++;
+			//printf("%d ", draw[c]); mozliwosc wyswietlania wygenerowanej kombinacji w celu sprawdzenia poprawnosci dzialania programu
 		}
 	}
 }
