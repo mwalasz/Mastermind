@@ -19,7 +19,7 @@ void showRed(int show);
 void showGreen(int show);
 
 /* funkcja wyswietlajaca komunikat o wyborze poziomu trudnosci gry */
-void chooseDifficulty();
+void showDifficultyMenuText();
 
 /* funkcja wyswietlajaca komunikat ostatnim mozliwym ruchu */
 void displayWarning(int numberOfTries);
@@ -32,5 +32,14 @@ void showGreeting();
 
 /* funkcja wyswietlajaca pozegnanie po zakonczeniu programu */
 void endOfProgram(const char* name);
+
+/* funkcja wyswietlajaca komunikat o wyborze akcji w menu wyswietlania rezultatow */
+void showStatisticsMenuText();
+
+/* funkcja wyswietlajaca komunikat o wyborze akcji w glownym menu */
+void showMainMenuText();
+
+/* funkcja wyswietlajaca komunikat o wyborze akcji w menu po zakonczeniu gry */
+void showMenuAfterGameText();
 
 #endif

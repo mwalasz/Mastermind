@@ -113,7 +113,7 @@ void showGreen(int show)
 	printf("|");
 }
 
-void chooseDifficulty()
+void showDifficultyMenuText()
 {
 	system("cls");
 
@@ -149,11 +149,30 @@ void showGreeting()
 	printf("|  |\\  /|  /_\\  /___   |  |__  |_\\ |\\  /| | |\\ | |  \\ | \n");
 	printf("|  | \\/ | |   | ___/   |  |__  | \\ | \\/ | | | \\| |__/ | \n");
 	printf("\\_____________________________________________________/ \n");
-}
 
+	Sleep(1500);
+}
 
 void endOfProgram(const char* name)
 {
 	system("cls");
 	printf("Thanks for the game! Goodbye %s!", name);
+}
+
+void showStatisticsMenuText()
+{
+	system("cls");
+	printf("Choose what action do you want to perform:\n\n1 : show defeats\n2 : show victories\n3 : show everything\n4 : back to menu\n\nYour choose: ");
+}
+
+void showMainMenuText()
+{
+	system("cls");
+	printf("Choose: \n\n1 : Play game\n2 : Statistics\n3 : Help\n4 : Quit\n\nYour choose: ");
+}
+
+void showMenuAfterGameText()
+{
+	Sleep(1500);
+	printf("\n\n1 : Play again\n2 : Back to menu\n3 : Exit the game\n\nYour choose: ");
 }
