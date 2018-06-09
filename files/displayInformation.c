@@ -144,6 +144,8 @@ void displayTableHeader()
 
 void showGreeting()
 {
+	system("cls");
+
 	printf(" _____________________________________________________\n");
 	printf("/           _    ___  ___  __  __         .      ___  \\ \n");
 	printf("|  |\\  /|  /_\\  /___   |  |__  |_\\ |\\  /| | |\\ | |  \\ | \n");
