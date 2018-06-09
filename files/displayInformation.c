@@ -126,7 +126,7 @@ void showDifficultyMenuText()
 
 	setColor(WHITE);
 	printf("3 : Back to main menu\n\n");
-	printf("\nYour choose: ");
+	printf("Your choose: ");
 }
 
 void displayWarning(int numberOfTries)
@@ -137,9 +137,9 @@ void displayWarning(int numberOfTries)
 
 void displayTableHeader()
 {
-	printf("========|======|==================|============|===========|======================|========================\n");
-	printf("  RESULT|  LVL |       NAME       |    TIME    |   TRIES   |        CORRECT       |        INCORRECT       \n");
-	printf("========|======|==================|============|===========|======================|========================\n");
+	printf("========|======|==================|=============|===========|======================|========================\n");
+	printf("  RESULT|  LVL |       NAME       |     TIME    |   TRIES   |        CORRECT       |        INCORRECT       \n");
+	printf("========|======|==================|=============|===========|======================|========================\n");
 }
 
 void showGreeting()
@@ -209,4 +209,10 @@ void showHelp()
 	printf("\nQUIT - click '4'\n");
 	printf("The program will shut down.");
 	printf("\n\nIn every possible menu, always the last option is return to main menu.");
+}
+
+void showAuthor()
+{
+	system("cls");
+	printf("Author of the program:\n\nMateusz Walasz,\nSilesian University of Technology,\nfaculty: Computer Science.");
 }

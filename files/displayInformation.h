@@ -47,4 +47,7 @@ void newGameComunicate();
 /* funkcja wyswietlajaca pomoc */
 void showHelp();
 
+/* funkcja wyswietlajaca autora programu */
+void showAuthor();
+
 #endif

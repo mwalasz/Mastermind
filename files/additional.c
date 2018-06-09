@@ -1,6 +1,7 @@
 #include "../files/additional.h"
 #include "../files/definitions.h"
 #include "../files/playerProposition.h"
+#include "../files/displayInformation.h"
 
 #include <conio.h>
 #include <Windows.h>
@@ -45,7 +46,7 @@ void takeParameter(int argc, char* argv[])
 		}
 		else if (!strcmp(argv[1], "-a")) //jesli przekazany argument to "-a" wyswietlana jest informacja o tworcy
 		{
-			printf("Author of the program:\n\nMateusz Walasz,\nSilesian University of Technology,\nfaculty: Computer Science.");
+			showAuthor();
 			returnToMenu();
 		}
 		else  //jesli bledny argument, program wyswietla komunikat o bledzie

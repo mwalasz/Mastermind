@@ -6,7 +6,7 @@
 
 void saveToFile(float time, const char* name, int goodPosition, int wrongPosition, int numberOfTries, unsigned int finalResult, unsigned int choosedLevel)
 {
-	FILE *results;
+	FILE * results;
 	int i;
 	char levelInfo;
 
@@ -21,16 +21,16 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 		if (finalResult == 1)
 		{
 			if (choosedLevel == 0)
-				fprintf(results, "VICTORY | EASY | name: %10s | time: %4.1f | tries: %2d \n", name, time, numberOfTries);
+				fprintf(results, "VICTORY | EASY | name: %10s | time: %5.1f | tries: %2d \n", name, time, numberOfTries);
 			else if (choosedLevel == 1)
-				fprintf(results, "VICTORY | HARD | name: %10s | time: %4.1f | tries: %2d \n", name, time, numberOfTries);
+				fprintf(results, "VICTORY | HARD | name: %10s | time: %5.1f | tries: %2d \n", name, time, numberOfTries);
 		}
 		else if (finalResult == 0)
 		{
 			if (choosedLevel == 0)
-				fprintf(results, "LOSS    | EASY | name: %10s | time: %4.1f | tries: %2d | correct positions: %d | incorrect positions: %d \n", name, time, numberOfTries, goodPosition, wrongPosition);
+				fprintf(results, "LOSS    | EASY | name: %10s | time: %5.1f | tries: %2d | correct positions: %d | incorrect positions: %d \n", name, time, numberOfTries, goodPosition, wrongPosition);
 			else if (choosedLevel == 1)
-				fprintf(results, "LOSS    | HARD | name: %10s | time: %4.1f | tries: %2d | correct positions: %d | incorrect positions: %d \n", name, time, numberOfTries, goodPosition, wrongPosition);
+				fprintf(results, "LOSS    | HARD | name: %10s | time: %5.1f | tries: %2d | correct positions: %d | incorrect positions: %d \n", name, time, numberOfTries, goodPosition, wrongPosition);
 		}     
 		fclose(results);
 	}
@@ -44,8 +44,6 @@ void showResultsFromFile(int switchOfType)
 
 	FILE * results;
 	results = fopen("../data/results.txt", "r");
-
-	/* zliczanie liczby linii w pliku */
 
 	int lines = countLinesInFile();
 	if (lines != 0)
