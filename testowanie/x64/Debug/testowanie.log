@@ -1,0 +1,3 @@
+﻿  main.c
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\testowanie\main.c(22): warning C4101: "playerProposition": lokalna zmienna, do której nie istnieje odwołanie
+  testowanie.vcxproj -> D:\Studia\przedmioty\semestr 2\PK\git\Mastermind\x64\Debug\testowanie.exe

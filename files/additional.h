@@ -18,4 +18,9 @@ void takeParameter(int argc, char* argv[]);
 /* funkcja pobierajaca imie gracza i alokujaca ja dynamicznie*/
 char * enterName();
 
+int returnCheckedCorrectSwitchVariable(int variableToCheck);
+
+/* funkcja wyswietlajaca komunikat o nowej grze */
+void newGameComunicate();
+
 #endif

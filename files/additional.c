@@ -1,6 +1,7 @@
 #include "../files/additional.h"
 #include "../files/definitions.h"
 
+#include <Windows.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -63,4 +64,24 @@ char * enterName()
 	scanf("%s", playerName);
 
 	return playerName;
+}
+
+int returnCheckedCorrectSwitchVariable(int variableToCheck)
+{
+	variableToCheck = getAndCheckIfCorrect(1);
+	while (variableToCheck == 0)
+	{
+		printf("Wrong input! Type in again: ");
+		variableToCheck = getAndCheckIfCorrect(1);
+	}
+
+	return variableToCheck;
+}
+
+void newGameComunicate()
+{
+	system("cls");
+	printf("New game!");
+	Sleep(1000);
+	system("cls");
 }

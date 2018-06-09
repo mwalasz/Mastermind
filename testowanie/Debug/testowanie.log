@@ -1,5 +1,4 @@
-﻿  filesupport.c
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(10): warning C4101: "levelInfo": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(9): warning C4101: "i": lokalna zmienna, do której nie istnieje odwołanie
-d:\studia\przedmioty\semestr 2\pk\git\mastermind\files\filesupport.c(54): warning C4013: niezdefiniowany "displayTableHeader"; przy założeniu, że extern zwraca int
+﻿  main.c
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\testowanie\main.c(46): warning C4101: "rozmiarTablicy": lokalna zmienna, do której nie istnieje odwołanie
+d:\studia\przedmioty\semestr 2\pk\git\mastermind\testowanie\main.c(22): warning C4101: "playerProposition": lokalna zmienna, do której nie istnieje odwołanie
   testowanie.vcxproj -> D:\Studia\przedmioty\semestr 2\PK\git\Mastermind\Debug\testowanie.exe
