@@ -6,7 +6,7 @@
 /* funkcja konwertujaca liczbe typu int na tablice zawierajaca poszczegolne cyfry */
 int * convertNumberToArray(unsigned int number);
 
-/* funkcja umozliwiajaca powrot do menu z jakiegos punktu programu */
+/* funkcja umozliwiajaca powrot do program z jakiegos punktu programu */
 void returnToMenu();
 
 /* funkcja wyswietlajaca pomoc */

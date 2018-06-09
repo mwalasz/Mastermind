@@ -117,7 +117,7 @@ void showDifficultyMenuText()
 {
 	system("cls");
 
-	printf("Choose dificulty:\n\n");
+	printf("GAME\n\nChoose dificulty:\n\n");
 	setColor(LIGHTGREEN);
 	printf("1 : Easy (numbers cannot repeat)\n");
 
@@ -164,7 +164,8 @@ void endOfProgram(const char* name)
 void showStatisticsMenuText()
 {
 	system("cls");
-	printf("Choose what action do you want to perform:\n\n1 : show defeats\n2 : show victories\n3 : show everything\n4 : back to menu\n\nYour choose: ");
+	printf("STATISTICS\n\nChoose what action do you want to perform:\n\n1 : show defeats\n2 : show victories\n3 : show everything\n4 : back to menu");
+	printf("\n\nYour choose: ");
 }
 
 void showMainMenuText()

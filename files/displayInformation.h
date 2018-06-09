@@ -3,7 +3,6 @@
 
 /* funkcje umozliwiajace wysiwetlanie informacji na ekranie */
 /* wykorzystuja dodatkowa bilbioteke (rlutil.h), dzieki ktorej mozliwa jest zmiana koloru poszczegolnych znakow */
-
 /* --- ---- ---- ---- */
 
 /* funkcja wyswietlajaca finalne wyniki */
@@ -33,13 +32,13 @@ void showGreeting();
 /* funkcja wyswietlajaca pozegnanie po zakonczeniu programu */
 void endOfProgram(const char* name);
 
-/* funkcja wyswietlajaca komunikat o wyborze akcji w menu wyswietlania rezultatow */
+/* funkcja wyswietlajaca komunikat o wyborze akcji w program wyswietlania rezultatow */
 void showStatisticsMenuText();
 
-/* funkcja wyswietlajaca komunikat o wyborze akcji w glownym menu */
+/* funkcja wyswietlajaca komunikat o wyborze akcji w glownym program */
 void showMainMenuText();
 
-/* funkcja wyswietlajaca komunikat o wyborze akcji w menu po zakonczeniu gry */
+/* funkcja wyswietlajaca komunikat o wyborze akcji w program po zakonczeniu gry */
 void showMenuAfterGameText();
 
 #endif

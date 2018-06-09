@@ -57,12 +57,17 @@ void takeParameter(int argc, char* argv[])
 {
 	if (argc == 2)
 	{
-		if (!strcmp(argv[1],"-h")) //wywolanie pomocy
+		if (!strcmp(argv[1],"-h")) //jesli przekazany argument to "-h" wyswietlana jest pomoc
 		{
 			showHelp();
 			returnToMenu();
 		}
-		else
+		else if (!strcmp(argv[1], "-a")) //jesli przekazany argument to "-a" wyswietlana jest informacja o tworcy
+		{
+			printf("Author of the program:\n\nMateusz Walasz,\nSilesian University of Technology,\nfaculty: Computer Science.");
+			returnToMenu();
+		}
+		else  //jesli bledny argument, program wyswietla komunikat o bledzie
 		{
 			system("cls");
 			printf("Incorrect parameters.\nTo launch game normally, press any key.");

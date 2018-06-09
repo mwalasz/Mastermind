@@ -87,4 +87,3 @@ int getProposition()
 
 	return output;
 }
-

@@ -2,7 +2,6 @@
 #define FILESUPPORT_H
 
 /* funkcje odpowiadajace za operacje na plikach */
-
 /* --- ---- ---- ---- */
 
 /* funkcja zapisujaca wyniki poszczegolnej rundy gry do pliku */

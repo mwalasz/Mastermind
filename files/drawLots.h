@@ -2,7 +2,6 @@
 #define DRAWLOTS_H
 
 /* funkcje losujace liczbe, ktora ma zostac odgadnieta */
-
 /* --- ---- ---- ---- */
 
 /* funkcja odpowiedzialna za wybor typu losowania: powtarzajacego sie, czy nie powtarzajacego sie */
