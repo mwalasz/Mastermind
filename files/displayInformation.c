@@ -191,10 +191,22 @@ void newGameComunicate()
 void showHelp()
 {
 	system("cls");
-	printf("HELP");
+	printf("H E L P");
+	setColor(YELLOW);
+	printf("\n\nHow to run program with parameters?");
+	setColor(WHITE);
 	printf("\n\nWhen you run program with '-h' flag, you will first see help and then program will start normally.\n");
-	printf("When you run program with '-a' flag, you will first see author of the program and then program will start normally.\n");
-	printf("\nIn main menu you can perform 4 actions: play a game, display all-time results, show help or turn off the program.\n");
+	printf("When you run program with '-a' flag, you will first see author of the program and then program will start normally.");
+	setColor(YELLOW);
+	printf("\n\nHow to play the game?");
+	setColor(WHITE);
+	printf("\n\nThe goal of the game is to find 5 numbers, that was randomly chosen by the computer.");
+	printf("\nIf one digit is on correct place, it changes color to green.\nIf one digit is on incorrect place, but it will appear in final combination, it is displayed as \"incorrect place\".");
+	printf("\nIf each digit typed in by user is not in final combination, there is no comunicate.\nIt is not counted in correct, neither in incorrect position.");
+	setColor(YELLOW);
+	printf("\n\nHow to use the program?");
+	setColor(WHITE);
+	printf("\n\nIn main menu you can perform 4 actions: play a game, display all-time results, show help or turn off the program.\n");
 	printf("\nGAME - click '1'\n");
 	printf("You have 2 possible options: easy level (digits cannot repeat) or hard level (digits can repeat).\n");
 	printf("To choose EASY level - press '1' and ENTER.\n");
