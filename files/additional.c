@@ -61,22 +61,22 @@ void takeParameter(int argc, char* argv[])
 char * enterName()
 {
 	system("cls");
-	char * playerName = malloc(NAME_LENGTH * sizeof(char));
+	char * playerName = malloc(NAME_LENGTH * sizeof(char)); //zarezerwowanie pamieci na imie gracza
 
 	printf("Enter your name: ");
-	scanf("%s", playerName);
+	scanf("%s", playerName); //pobranie imienia
 
 	return playerName;
 }
 
 unsigned int returnCheckedCorrectSwitchVariable(unsigned int variableToCheck)
 {
-	variableToCheck = getAndCheckIfCorrect(1);
-	while (variableToCheck == 0)
+	variableToCheck = getAndCheckIfCorrect(1); //zmienna ktorej nalezy sprawdzic poprawnosc
+	while (variableToCheck == 0) //dopoki nie bedzie poprawna, wymagane bedzie ponowne wprowadzenie
 	{
 		printf("Wrong input! Type in again: ");
 		variableToCheck = getAndCheckIfCorrect(1);
 	}
 
-	return variableToCheck;
+	return variableToCheck; //zwrocenie poprawnej zmiennej
 }

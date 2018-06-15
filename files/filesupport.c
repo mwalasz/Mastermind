@@ -10,13 +10,13 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 	int i;
 	char levelInfo;
 
-	if ((results = fopen("../data/results.txt", "a")) == NULL)
+	if ((results = fopen("../data/results.txt", "a")) == NULL) //gdy blad podczas otwarcia pliku, wyswietlany jest komunikat
 	{
 		printf("\n\n");
 		perror("Error");
 		printf("Results could not be saved!");
 	}
-	else
+	else //jesli poprawnie otwarto plik w zaleznosc od rezultatu gry sa zapisywane wyniki
 	{
 		if (finalResult == 1)
 		{
@@ -32,7 +32,7 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 			else if (choosedLevel == 1)
 				fprintf(results, "LOSS    | HARD | name: %10s | time: %5.1f | tries: %2d | correct positions: %d | incorrect positions: %d \n", name, time, numberOfTries, goodPosition, wrongPosition);
 		}     
-		fclose(results);
+		fclose(results); //zakmniecie pliku
 	}
 }
 
@@ -45,28 +45,29 @@ void showResultsFromFile(int switchOfType)
 	FILE * results;
 	results = fopen("../data/results.txt", "r");
 
-	int lines = countLinesInFile();
-	if (lines != 0)
+	int lines = countLinesInFile(); //zliczanie linii w pliku
+
+	if (lines != 0) //jesli liczba linii w pliku nie jest rowna 0
 	{
-		if (results)
+		if (results) //jesli poprwanie otwarto plik
 		{
-			displayTableHeader();
+			displayTableHeader(); //wyswietlanie naglowka tabeli
 
 			for (i = 0; i < lines; i++)
 			{
-				result = fgets(text, max_n, results);   // czytamy ze standardowego wejœcia
+				result = fgets(text, max_n, results);   //czytamy ze standardowego wejœcia
 
 				if (result != NULL)
 				{
 					if (switchOfType == 3) //wyswietlanie wszystkiego
 						printf("%s", text);
-					else if (switchOfType == 1)/* wyswietlanie porazek */
+					else if (switchOfType == 1) //wyswietlanie porazek
 					{
 						if (text[0] == 'L')
 							printf("%s", text);
 						else continue;
 					}
-					else if (switchOfType == 2)/* wyswietlanie zwyciestw */
+					else if (switchOfType == 2) //wyswietlanie zwyciestw
 					{
 						if (text[0] == 'V')
 							printf("%s", text);
@@ -76,7 +77,7 @@ void showResultsFromFile(int switchOfType)
 				else break;
 			}
 
-			fclose(results);
+			fclose(results); //zakmkniecie pliku
 		}
 		else perror("\nError");
 	}
@@ -91,17 +92,16 @@ int countLinesInFile()
 
 	results = fopen("../data/results.txt", "r");
 
-	if (results == NULL)
+	if (results == NULL) //jesli nie mozna bylo otworzyc pliku, zwracana jest 0 ilosc linii
 		return 0;
 	else
 	{
 		for (c = getc(results); c != EOF; c = getc(results))
 		{
 			if (c == '\n')
-				numberOfLines++;
+				numberOfLines++; //jesli napotkano na znak nowej linii, inkrementuje sie zmienna przechowujaca liczbe linii
 		}
-
-		fclose(results);
+		fclose(results); //zamkniecie pliku
 	}
-	return numberOfLines;
+	return numberOfLines; //zwrocenie liczby linii
 }

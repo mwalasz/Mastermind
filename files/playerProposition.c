@@ -10,36 +10,33 @@ void analysisOfPlayerProposition(int proposition[], int draw[], int goodPosition
 	int copyOfDraw[NUMBER_OF_POSITIONS];
 	int i, j, k, l, buffer;
 
-	//kopiowanie wylosowanej sekwencji przez komputer
-	for (i = 0; i < NUMBER_OF_POSITIONS; i++)
+	for (i = 0; i < NUMBER_OF_POSITIONS; i++) //kopiowanie wylosowanej sekwencji przez komputer
 		copyOfDraw[i] = draw[i];
 
-	//zliczanie dobrych cyfr na dobrych miejscach
-	*goodPosition = 0;
+	*goodPosition = 0; //zliczanie dobrych cyfr na dobrych miejscach
 
 	for (j = 0; j < NUMBER_OF_POSITIONS; j++)
 	{
-		if (proposition[j] == copyOfDraw[j])
+		if (proposition[j] == copyOfDraw[j]) //jesli skladowa propozycji gracza zgadza sie z losem komputera
 		{
-			(*goodPosition)++;
-			copyOfDraw[j] = proposition[j] = 0;
-			correctIndex[j] = 1;
+			(*goodPosition)++; //inkrementowana jest liczba dobrych pozycji
+			copyOfDraw[j] = proposition[j] = 0; //wyzerowanie kazdej z tablic jak zaznaczenie ze to miejsce zostalo sprawdzone
+			correctIndex[j] = 1; //zaznaczenie poprawnego indeksu, w celu pozniejszego wyswietlenie go w odpowiednim kolorze
 		}
 	}
 
-	//zliczanie dobrych cyfr na zlych miejscach
-	*wrongPosition = 0;
+	*wrongPosition = 0; 	//zliczanie dobrych cyfr na zlych miejscach
 
 	for (k = 0; k < NUMBER_OF_POSITIONS; k++)
 	{
-		buffer = copyOfDraw[k];
+		buffer = copyOfDraw[k]; //zmienna pomocnicza przechowujaca jeden znak
 
 		for (l = 0; l < NUMBER_OF_POSITIONS; l++)
 		{
-			if (proposition[l] != 0 && proposition[l] == buffer)
-			{
-				(*wrongPosition)++;
-				proposition[l] = copyOfDraw[k] = 0;
+			if (proposition[l] != 0 && proposition[l] == buffer) //gdy znaleziono cyfre w losie komputera, ktora jest w propozycji gracza
+			{//ale znajduje sie ona na zlym miejscu
+				(*wrongPosition)++; //inkrementowana jest liczba zlych pozycji
+				proposition[l] = copyOfDraw[k] = 0; //wyzerowanie kazdej z tablic jak zaznaczenie ze to miejsce zostalo sprawdzone
 			}
 		}
 	}
@@ -53,19 +50,17 @@ int getAndCheckIfCorrect(int lengthToCheck)
 
 	fseek(stdin, 0, SEEK_END); //czyszczenie bufora
 
-	fgets(stringArray, sizeof(stringArray), stdin);
-	length = strlen(stringArray);
+	fgets(stringArray, sizeof(stringArray), stdin); //pobranie propozycji do analizy
+	length = strlen(stringArray); //odczytanie dlugosci propozycji
 
-
-	if (length == lengthToCheck + 1) //+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
-	{
+	if (length == lengthToCheck + 1) //jesli dlugosc to zadana dlugosc propozycji w programie
+	{//+1 miejsce ze wzgledu na znak konczacy tablice znakow "\0"
 		for (i = 0; i < length - 1; i++)
 		{
 			if (!isdigit(stringArray[i]) || stringArray[i] == '0')
-					return 0;
-		
+					return 0; //jesli napotkano na znak nie bedacy cyfra, lub 0, zwracane jest 0
 		}
-		output = atoi(stringArray);
+		output = atoi(stringArray); //jesli w propozycji pojawily sie tylko dozwolone znaki, przeksztalcane jest na int
 	}
 	else return 0; //niepoprawna dlugosc
 

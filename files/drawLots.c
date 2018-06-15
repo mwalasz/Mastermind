@@ -36,7 +36,7 @@ void randomNonRepeatable(int draw[])
 
 	while (c < NUMBER_OF_POSITIONS)
 	{
-		get = 1 + rand() % 9;
+		get = 1 + rand() % 9; //losowanie cyfr z zakresu 1-9
 
 		for (i = 0; i <= c; i++)
 		{
