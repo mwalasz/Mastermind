@@ -10,7 +10,7 @@ int * convertNumberToArray(unsigned int number);
 /* funkcja umozliwiajaca powrot do program z jakiegos punktu programu */
 void returnToMenu();
 
-/* funkcja pobierajaca parrametr w trakcie uruchamiania programu */
+/* funkcja pobierajaca parametr w trakcie uruchamiania programu */
 void takeParameter(int argc, char* argv[]);
 
 /* funkcja pobierajaca imie gracza i alokujaca ja dynamicznie*/

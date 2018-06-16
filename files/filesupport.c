@@ -1,5 +1,6 @@
 #include "../files/filesupport.h"
 #include "../files/displayInformation.h"
+#include "../files/definitions.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -21,9 +22,9 @@ void saveToFile(float time, const char* name, int goodPosition, int wrongPositio
 		if (finalResult == 1)
 		{
 			if (choosedLevel == 0)
-				fprintf(results, "VICTORY | EASY | name: %10s | time: %5.1f | tries: %2d \n", name, time, numberOfTries);
+				fprintf(results, "VICTORY | EASY | name: %10s | time: %5.1f | tries: %2d | correct positions: %d | incorrect positions: 0\n", name, time, numberOfTries, NUMBER_OF_POSITIONS);
 			else if (choosedLevel == 1)
-				fprintf(results, "VICTORY | HARD | name: %10s | time: %5.1f | tries: %2d \n", name, time, numberOfTries);
+				fprintf(results, "VICTORY | HARD | name: %10s | time: %5.1f | tries: %2d | correct positions: %d | incorrect positions: 0\n", name, time, numberOfTries, NUMBER_OF_POSITIONS);
 		}
 		else if (finalResult == 0)
 		{

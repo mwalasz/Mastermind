@@ -28,6 +28,7 @@ void displayFinalResults(int draw[], int goodPosition, int wrongPosition, int nu
 		printf(" unsucessful tries!\n\n");
 
 		printf("Correct positions:      "); //wypisanie liczby miejsc na dobrych pozycjach
+		showGreen(goodPosition);
 
 		printf("\nIncorrect positions:    "); //wypisywanie liczby miejsc dobrych cyfr na zlych miejscach
 		showRed(wrongPosition);
@@ -60,7 +61,7 @@ void displayFinalResults(int draw[], int goodPosition, int wrongPosition, int nu
 				printf(" %d ", copyOfPropositionArray[j]); // wypelnianie tablicy losowymi cyframi od 0 do MAKSIMUM
 			}
 			setColor(WHITE);
-			printf("|");
+			printf("|\n");
 		}
 		setColor(WHITE);
 	}
@@ -228,5 +229,5 @@ void showHelp()
 void showAuthor()
 {
 	system("cls");
-	printf("Author of the program:\n\nMateusz Walasz,\nSilesian University of Technology,\nfaculty: Computer Science.");
+	printf("Author of the program:\n\nMateusz Walasz,\nSilesian University of Technology,\nfaculty: Automic Control, Electronics and Computer Science.");
 }
